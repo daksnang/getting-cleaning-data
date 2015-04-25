@@ -11,4 +11,14 @@
 - R version: 3.1.1 (2014-07-10)
 - R libraries used in project: plyr
 
-If using linux distribution, with appropriate R libraries, the "run_analysis.R" script can be sourced to produce "tidy_data.csv" file. R will create "samsung-data" directory, download and extract dataset, and perform all necessary data transformations and calculations.
+## Notes
+When using linux distribution, with appropriate R libraries, the "run_analysis.R" script can be sourced to produce "tidy_data.csv" file. R will create "samsung-data" directory, download and extract dataset, and perform all necessary data transformations and calculations.
+
+On Windows platform, some modifications to folder path names need to be made.
+
+The code was written in spirit of 'literate programming' and hopefully the code is annotated in a way that helps the reader. Additional details are contained in the codebook.
+
+
+   
+
+
