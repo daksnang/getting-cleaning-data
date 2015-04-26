@@ -1,15 +1,15 @@
-#########################################################
-# Final project for "Getting and Cleaning Data"         #
-# Spring 2015                                           #
-#                                                       #
-# Please see Readme file for technical data.            #
-# Some commands and solutions are platform specific.    #
-#                                                       #
-# Ubuntu 14.10                                          # 
-# x86_64-pc-linux-gnu (64-bit)                          #  
-# R 3.1.1 (2014-07-10)                                  #
-# name of working directory: 'samsung-data'             #                        
-#########################################################
+############################################################
+# Final project for "Getting and Cleaning Data"            #
+# Spring 2015                                              #
+#                                                          #
+# Please see Readme file for technical data.               #
+# Some commands and function calls are platform specific.  #
+#                                                          #
+# Ubuntu 14.10                                             # 
+# x86_64-pc-linux-gnu (64-bit)                             #  
+# R 3.1.1 (2014-07-10)                                     #
+# name of working directory: 'samsung-data'                #                        
+############################################################
 
 ## load needed libraries
 library(plyr)
@@ -83,9 +83,9 @@ data_set$activity <- with(dict, activity[match(data_set$activity, id)])
 ### (5) CREATE TIDY DATA SET WITH THE AVERAGE OF EACH VARIABLE
 ###     FOR EACH ACTIVITY AND EACH SUBJECT 
 # average per activity for each subject (participant)
-# ordered by subject
+# ordered by subject...
 data_set_avg <- ddply(data_set, .(subject, activity), colwise(mean))
-# or activity - unomment if needed 
+# ...or activity - uncomment if needed 
 #data_set_avg1 <- data_set_avg[order(data_set_avg$activity, data_set_avg$subject),]
 #data_set_avg1 <- data_set_avg1[, c(2,1,3:81)]
 # sanity check 
@@ -96,4 +96,4 @@ write.table(data_set_avg, file="tidy_data.txt", sep=" ", row.names=FALSE)
 #write.table(data_set_avg, file="tidy_data.csv", sep=",", row.names=FALSE)
 #write.table(data_set_avg1, file="tidy_data_by_activity.csv", sep=",", row.names=FALSE)
 
-# Thank you for taking the time to evaluate my work
+# Thank you for taking the time to evaluate my work :)
